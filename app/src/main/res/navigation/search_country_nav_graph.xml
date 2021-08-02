@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/search_country_nav_graph"
+    app:startDestination="@id/searchCountryFragment">
+
+    <fragment
+        android:id="@+id/searchCountryFragment"
+        android:name="com.example.country_search_demo_app.ui.fragments.SearchCountryFragment"
+        android:label="@string/search_country_fragment_title" />
+</navigation>

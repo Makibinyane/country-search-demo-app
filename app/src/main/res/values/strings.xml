@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Country Search App</string>
+    <string name="country_name">Country Name: %1$s</string>
+    <string name="capital_city">Capital: %1$s</string>
+    <string name="native_name">Native Name: %1$s</string>
+    <string name="population_count">Population Count: %1$s</string>
+    <string name="currency">Currency: %1$s</string>
+    <string name="search_input_error_message">"Please enter search input"</string>
+    <string name="lookup_fragment_title">Country Lookup Results</string>
+    <string name="country_spelling_fragment_title">Country Spelling Names</string>
+    <string name="search_country_fragment_title">Search Country</string>
+    <string name="something_went_wrong_message">Something went wrong, please try again!!</string>
+    <string name="languages_header">Languages</string>
+    <string name="enter_country_name_hint">Enter country name</string>
+    <string name="search_button_text">Search</string>
+    <string name="lookup_button_text">Lookup</string>
+
+</resources>

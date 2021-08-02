@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="general_margin">10dp</dimen>
+    <dimen name="view_height">1dp</dimen>
+    <dimen name="view_margin_top">5dp</dimen>
+    <dimen name="font_medium_size">18sp</dimen>
+    <dimen name="lookup_margin_top">30dp</dimen>
+    <dimen name="default_margin">0dp</dimen>
+</resources>
