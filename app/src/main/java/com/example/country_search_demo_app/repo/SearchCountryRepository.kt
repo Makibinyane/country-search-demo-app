@@ -29,4 +29,9 @@ class SearchCountryRepository @Inject constructor(
 
     val data = dao.getAllCountries()
 
+    suspend fun deleteAllItems() {
+        withContext(Dispatchers.IO) {
+            dao.deleteAll()
+        }
+    }
 }

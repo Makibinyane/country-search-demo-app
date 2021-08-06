@@ -28,6 +28,12 @@ class SearchCountryViewModel @Inject constructor(private val repository: SearchC
         }
     }
 
+    fun deleteAllItems() {
+        viewModelScope.launch {
+            repository.deleteAllItems()
+        }
+    }
+
     private fun onError(message: String) {
         errorMessage.value = message
         loading.value = false

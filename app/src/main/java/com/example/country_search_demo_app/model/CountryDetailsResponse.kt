@@ -35,6 +35,6 @@ data class CountryDetailsResponse(
     @SerializedName("regionalBlocs") val regionalBlocs: List<RegionalBloc>,
     @SerializedName("cioc") val cioc: String
 ) : Parcelable {
-    @PrimaryKey(autoGenerate = false)
+    @PrimaryKey(autoGenerate = true)
     var id: Int = 0
 }

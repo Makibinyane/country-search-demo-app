@@ -22,6 +22,10 @@ class SearchCountryFragment : Fragment(R.layout.fragment_search_country) {
     private val viewModel: SearchCountryViewModel by viewModels()
     private lateinit var searchCountryBinding: FragmentSearchCountryBinding
 
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        viewModel.deleteAllItems()
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,6 +35,7 @@ class SearchCountryFragment : Fragment(R.layout.fragment_search_country) {
 
         searchCountryBinding.btnSearch.setOnClickListener {
             if (searchCountryBinding.txtSearch.text.toString().isNotEmpty()) {
+                viewModel.deleteAllItems()
                 viewModel.getCountryDetailsByName(searchCountryBinding.txtSearch.text.toString())
             } else {
                 searchCountryBinding.txtSearch.error =

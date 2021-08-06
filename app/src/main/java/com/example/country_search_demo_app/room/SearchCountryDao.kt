@@ -16,4 +16,7 @@ interface SearchCountryDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(countries: List<CountryDetailsResponse>)
+
+    @Query("DELETE FROM countries")
+    suspend fun deleteAll()
 }
