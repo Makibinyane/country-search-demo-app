@@ -47,13 +47,15 @@ class SearchCountryFragment : Fragment(R.layout.fragment_search_country) {
         }
 
         viewModel.countryData.observe(viewLifecycleOwner) { items ->
-            val countryNamesAdapter = CountryNameAdapter { handleClick(it) }
+            val countryNamesAdapter = activity?.let { activity ->
+                CountryNameAdapter(activity.applicationContext) { handleClick(it) }
+            }
 
             searchCountryBinding.countryNamesRecyclerView.apply {
                 itemAnimator = DefaultItemAnimator()
                 adapter = countryNamesAdapter
             }
-            countryNamesAdapter.submitList(items)
+            countryNamesAdapter?.submitList(items)
         }
 
         viewModel.errorMessage.observe(viewLifecycleOwner) { message ->
