@@ -6,5 +6,23 @@
     <fragment
         android:id="@+id/searchCountryFragment"
         android:name="com.example.country_search_demo_app.ui.fragments.SearchCountryFragment"
-        android:label="@string/search_country_fragment_title" />
+        android:label="@string/search_country_fragment_title" >
+
+        <action
+            android:id="@+id/action_searchCountryFragment_to_countrySpellingNamesFragment"
+            app:destination="@id/countrySpellingNamesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countrySpellingNamesFragment"
+        android:name="com.example.country_search_demo_app.ui.fragments.CountrySpellingNamesFragment"
+        android:label="@string/country_spelling_fragment_title">
+
+        <argument
+            android:name="countryName"
+            app:argType="string" />
+        <argument
+            android:name="spellingNames"
+            app:argType="string[]" />
+
+    </fragment>
 </navigation>

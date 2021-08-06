@@ -5,6 +5,7 @@ import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.DefaultItemAnimator
 import com.example.country_search_demo_app.R
 import com.example.country_search_demo_app.databinding.FragmentSearchCountryBinding
@@ -59,10 +60,12 @@ class SearchCountryFragment : Fragment(R.layout.fragment_search_country) {
             Snackbar.make(searchCountryBinding.txtSearch, message, Snackbar.LENGTH_LONG).show()
         }
 
-
     }
 
     private fun handleClick(data: CountryDetailsResponse) {
+        val spellingNames = data.altSpellings.toTypedArray()
 
+        findNavController().navigate(SearchCountryFragmentDirections
+            .actionSearchCountryFragmentToCountrySpellingNamesFragment(data.name, spellingNames))
     }
 }
